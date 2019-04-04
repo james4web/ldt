@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>tick-w-bg copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Our-Technology" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1175.000000, -2955.000000)">
+            <g id="Group-6" transform="translate(183.000000, 2211.000000)">
+                <g id="Group-9" transform="translate(0.000000, 195.000000)">
+                    <g id="tick-w-bg" transform="translate(992.000000, 549.000000)">
+                        <g id="Group">
+                            <circle id="Oval" fill="#3AC952" fill-rule="nonzero" cx="13" cy="13" r="13"></circle>
+                            <g id="tick" transform="translate(7.944444, 9.388889)" fill-rule="nonzero" stroke="#FFFFFF" stroke-linecap="square" stroke-width="3">
+                                <path d="M0.111111111,3.828125 L3.13366011,6.80344667" id="Line"></path>
+                                <path d="M3.06604549,0.174388526 L9.80032678,6.80344667" id="Line" transform="translate(6.444444, 3.500000) scale(-1, 1) translate(-6.444444, -3.500000) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

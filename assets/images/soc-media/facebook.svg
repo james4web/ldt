@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1012.000000, -3671.000000)" fill-rule="nonzero">
+            <g id="Group-14" transform="translate(1012.000000, 3671.000000)">
+                <path d="M15,30 C6.72864,30 0,23.2704 0,15 C0,6.72864 6.72864,0 15,0 C23.2704,0 30,6.72864 30,15 C30,23.2704 23.2704,30 15,30 Z" id="Path" fill="#FFFFFF"></path>
+                <path d="M12.7724204,23 L16.3201543,23 L16.3201543,14.4990453 L18.6865959,14.4990453 L19,11.5699203 L16.3201543,11.5699203 L16.3240116,10.1034483 C16.3240116,9.33966079 16.3972999,8.93007975 17.5043394,8.93007975 L18.9836066,8.93007975 L18.9836066,6 L16.6162006,6 C13.7724204,6 12.7724204,7.42159946 12.7724204,9.81129956 L12.7724204,11.5699203 L11,11.5699203 L11,14.5 L12.7724204,14.5 L12.7724204,23 Z" id="Path" fill="#22375C"></path>
+            </g>
+        </g>
+    </g>
+</svg>

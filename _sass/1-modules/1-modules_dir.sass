@@ -1,0 +1,222 @@
+// Home hero - used on homepage
+#home-hero
+    height: calc(100vh - 50px)
+    min-height: 720px
+    background-color: $blue-5
+    position: relative
+    margin-top: 52px
+    #home-hero-image
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 90%
+    .text-container
+        max-width: 610px
+        padding-top: 140px
+        h6  
+            font-size: 15px
+            letter-spacing: .2px
+            text-transform: uppercase
+            font-weight: 600
+            color: $gray
+            margin-bottom: 20px
+        h1 
+            font-size: 50px
+            font-weight: 700
+            letter-spacing: -.7px
+
+// Home 3 pointer - used on homepage
+#three-pointer
+    padding: 100px 0
+    
+    h2
+        margin-bottom: 100px
+        text-align: center
+        width: 100%
+    .row .col-sm
+        text-align: center
+        img 
+            height: 92px
+            margin-bottom: 30px
+        &:nth-child(2) img
+            padding: 13px 0
+        &:nth-child(3) img
+            padding: 3px 0
+        p
+            color: $gray
+    .cta-section
+        padding-top: 50px
+        p
+            width: 100%
+            
+// Testimonial - used on homepage
+#testimonial-01
+    .row
+        flex-direction: column
+        margin-top: 35px
+        margin-bottom: 40px
+        .testimonial-center
+            border-top: 5px solid #eee
+            border-bottom: 5px solid #eee
+            max-width: 800px
+            margin: 0 auto
+            padding: 55px 0 50px 0
+    p
+        text-align: center
+        &.testimonial
+            font-size: 28px
+            font-weight: 400
+            font-style: italic
+            color: $darkGray
+            margin-bottom: 30px
+        &.name
+            font-size: 20px
+            font-weight: 700
+            color: $black
+            margin-bottom: 0
+        &.title
+            color: $muted
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 600
+            margin-bottom: 10px
+
+// Video section - used on homepage
+#home-video
+    height: 500px
+    margin-top: 80px
+    background-image: url("../images/video.jpg")
+    background-position: center center
+    background-size: cover
+    &:after 
+        content: ''
+        width: 100%
+        height: 100%
+        display: block
+        background-color: rgba(1,1,1,.4)
+        z-index: 10
+
+// Better data section - used on homepage
+#deep-dive
+    margin-bottom: 100px
+    h2
+        width: 100%
+        text-align: center
+        margin-top: 100px
+        margin-bottom: 89px
+    .col-sm
+        display: flex
+        .img-parent
+            width: 80px
+            img
+                height: 50px
+        .text-container
+            max-width: 390px
+            p
+                color: $gray
+    .row
+        &:nth-child(n+2)
+            margin-bottom: 30px
+
+// Invest CTA section - used on homepage
+#invest
+    background-color: $blue-4
+    width: 83%
+    padding: 70px
+    display: flex
+    justify-content: flex-end
+    box-shadow: 20px 20px 0 0 $blue-1
+    .invest-parent
+        width: 1110px
+        text-align: center
+        h2
+            margin-bottom: 30px
+            font-size: 33px
+            color: $blue-0
+        p
+            max-width: 600px
+            margin: 0 auto
+            font-size: 20px
+            color: $blue-0
+        .cta-button
+            margin-top: 40px
+            display: inline-block
+        
+// OUR TECHNOLOGY PAGE ====================================
+// OT Hero
+#hero-split
+    margin-top: 50px
+    .row
+        display: flex
+        border-bottom: 1px solid #ddd
+    .side
+        &-1
+            display: flex
+            justify-content: center
+            height: 650px
+            flex-direction: column
+            h1
+                margin-bottom: 30px
+            p 
+                margin-bottom: 35px
+                line-height: 1.7em
+        &-2
+            display: flex
+            justify-content: center
+            flex-direction: column
+
+// old tech section
+#old-tech
+    padding: 150px 0
+    ul
+        list-style: none
+        margin-top: 35px
+        li
+            margin-bottom: 20px
+            position: relative
+            font-size: 18px
+            color: $darkGray
+            &:after 
+                display: block
+                position: absolute
+                left: -40px
+                top: 3px
+                height: 23px
+                width: 23px
+                background-image: url('../images/icon-grey-x.svg')
+                content: ''
+                background-size: cover
+    .col-sm
+        display: flex
+        justify-content: center
+        flex-direction: column
+// New section
+#new-tech-section
+    background-color: $blue-1
+    padding: 65px 0
+    .number-heading
+        text-align: center
+        flex-direction: column
+        max-width: 500px
+        margin: 0 auto 50px auto
+        p, h2
+            color: white
+    .number-section
+        span 
+            font-size: 40px
+            text-align: center
+            border-bottom: 2px solid $blue-3
+            color: $blue-3
+            font-weight: 900
+            width: 80%
+            display: block
+            margin: auto
+            margin-bottom: 30px
+            padding: 0 30px 10px 30px
+        p 
+            font-weight: 500
+            text-align: center
+            color: white
+
+
+

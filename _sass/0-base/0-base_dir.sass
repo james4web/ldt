@@ -1,2 +1,190 @@
-.test 
-    color: red
+// Colors
+$blue-0: #22375C
+$blue-1: #214C88
+$blue-2: #3C8EDC
+$blue-3: #9DC6ED
+$blue-4: #C4DDF4
+$blue-5: #F4F8FF
+
+$black: #000000
+$darkGray: #333333
+$darkerGray: #555555
+$gray: #777777
+$muted: #bbbbbb
+
+
+// Fonts
+body 
+    font-family: 'Source Sans Pro', sans-serif !important
+
+    h1
+        font-size: 50px
+        color: $darkGray
+        font-weight: 700
+
+    h2 
+        font-size: 35px
+        color: $darkGray
+        font-weight: 700
+
+    h3 
+        font-size: 24px
+        color: $darkGray
+        font-weight: 700
+
+    h4
+        font-size: 20px
+        color: $darkGray
+        font-weight: 700
+
+    h5 
+        font-size: 16px
+        color: $darkGray
+        font-weight: 700
+
+    h6 
+        font-size: 14px
+        color: $darkGray
+        font-weight: 700
+
+    p
+        font-size: 18px
+        color: $darkGray
+        font-weight: 500
+        font-family: 'helvetica', arial, sans-serif !important
+        &.category
+            font-size: 14px 
+            font-weight: 500
+            color: $darkGray
+            text-transform: uppercase
+            margin-bottom: 10px !important
+
+    a
+        display: inline-block !important
+        &.link-underline
+            text-decoration: none
+            border-bottom: 2px solid #E25C54
+            padding-bottom: 3px
+            color: $darkGray
+            font-weight: 600
+            width: 112px
+            transition: .2s all
+            i.fas
+                font-size: 15px
+                margin-left: 10px
+                transition: .2s all
+            &:hover
+                i.fas
+                    margin-left: 15px
+            
+
+
+// Header - used on multiple pages
+header#header
+    color: #333
+    position: fixed
+    top: 0
+    right: 0
+    height: 50px
+    background-color: #fff
+    z-index: 10
+    width: 100%
+    #logo 
+        font-weight: 600
+        padding-top: 16px
+        display: inline-block
+        font-size: 14px
+        text-transform: uppercase
+    //main nav
+    ul#main-nav
+        display: flex
+        list-style-type: none
+        position: absolute
+        right: 0
+        top: 0
+        height: 100%
+        li 
+            a
+                margin-right: 50px
+                height: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 14px
+                font-weight: 600
+                text-decoration: none
+                color: $black
+                &:hover
+                    color: $black
+
+            &:nth-last-child(1) a
+                background-color: $blue-1
+                color: white
+                padding: 0 20px
+                transition: .1s all
+                text-transform: capitalize
+                margin-right: 0
+                text-decoration: none
+                border: 1px solid $blue-1
+                &:hover 
+                    background-color:  white
+                    color: $blue-1
+                    border: 1px solid $blue-1
+
+
+
+// CTA button with rounded corners 
+.cta-button
+    color: white
+    background-color: $blue-1
+    padding: 12px 25px
+    border-radius: 30px
+    letter-spacing: -.1px
+    font-weight: 500
+    font-size: 16px
+    text-align: center !important
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2)
+    transition: .2s all
+    &:hover 
+        text-decoration: none
+        color: $blue-1
+        background-color: white
+
+    &.secondary
+        color: $blue-1
+        background-color: white
+        box-shadow: none
+        font-weight: 600
+        box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2)
+        &:hover 
+            color: white
+            background-color: $blue-1
+            box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2)
+
+// Footer
+footer
+    background-color: #eee
+    display: flex
+    padding: 75px 0
+    margin-top: 100px
+    h5  
+        color: $darkerGray
+        font-weight: 700
+    ul
+        list-style-type: none
+    a 
+        color: $darkerGray
+        font-weight: 600
+        font-size: 14px
+        &:hover
+            color: $darkerGray
+            text-decoration: underline
+    .social-media
+        margin-top: 17px
+        a
+            margin-right: 10px
+            img
+                transition: all .1s
+                &:hover 
+                    transform: translateY(-2px)
+

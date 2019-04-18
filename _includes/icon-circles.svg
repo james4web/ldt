@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="icon-circles" width="92px" height="92px" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-307.000000, -1238.000000)" fill="#3C8EDC">
+            <g id="Big-3" transform="translate(240.000000, 1089.000000)">
+                <g id="Group-7">
+                    <g id="Group" transform="translate(67.000000, 149.000000)">
+                        <ellipse class="circle3" id="Oval" opacity="0.3" cx="45.5490196" cy="46" rx="45.5490196" ry="46"></ellipse>
+                        <ellipse class="circle2" id="Oval" opacity="0.4" cx="45.5490196" cy="46" rx="32.9215686" ry="33.372549"></ellipse>
+                        <ellipse class="circle1" id="Oval" cx="45.5490196" cy="46" rx="18.4901961" ry="18.9411765"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

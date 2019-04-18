@@ -1,29 +1,26 @@
 // Home hero - used on homepage
-#home-hero
+.home-hero
     height: calc(100vh - 50px)
     min-height: 720px
     background-color: $blue-5
     position: relative
     margin-top: 52px
-    #home-hero-image
+    pointer-events: none
+    .home-hero-image
         position: absolute
         bottom: 0
         right: 0
-        width: 90%
+        width: 100%
     .text-container
-        max-width: 610px
-        padding-top: 140px
-        h6  
-            font-size: 15px
-            letter-spacing: .2px
-            text-transform: uppercase
-            font-weight: 600
-            color: $gray
-            margin-bottom: 20px
+        max-width: 650px
+        padding-top: 160px
+        p.category  
+            margin-bottom: 8px !important
+            color: $darkGray
         h1 
-            font-size: 50px
             font-weight: 700
             letter-spacing: -.7px
+            display: inline-block !important
 
 // Home 3 pointer - used on homepage
 #three-pointer
@@ -33,9 +30,9 @@
         margin-bottom: 100px
         text-align: center
         width: 100%
-    .row .col-sm
+    .row .col-md
         text-align: center
-        img 
+        img, svg 
             height: 92px
             margin-bottom: 30px
         &:nth-child(2) img
@@ -48,13 +45,18 @@
         padding-top: 50px
         p
             width: 100%
+    @media screen and (max-width : $breakpoint-tablet)
+        .col-md
+            margin-bottom: 50px
+        .cta-section
+            padding-top: 0px
             
 // Testimonial - used on homepage
 #testimonial-01
+    margin-top: 50px
+    margin-bottom: 150px
     .row
         flex-direction: column
-        margin-top: 35px
-        margin-bottom: 40px
         .testimonial-center
             border-top: 5px solid #eee
             border-bottom: 5px solid #eee
@@ -68,7 +70,7 @@
             font-weight: 400
             font-style: italic
             color: $darkGray
-            margin-bottom: 30px
+            margin-bottom: 20px
         &.name
             font-size: 20px
             font-weight: 700
@@ -88,6 +90,7 @@
     background-image: url("../images/video.jpg")
     background-position: center center
     background-size: cover
+    position: relative
     &:after 
         content: ''
         width: 100%
@@ -95,6 +98,24 @@
         display: block
         background-color: rgba(1,1,1,.4)
         z-index: 10
+    a
+        height: 100%
+        width: 100%
+        position: absolute
+        img 
+            position: absolute
+            left: calc(50% - 51px)
+            top: calc(50% - 51px)
+            // transition: all .2s
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            transform-origin: center
+            opacity: 1
+            z-index: 1
+            width: 102px
+            height: 102px
+            &:hover
+                -webkit-transform: scale3d(1.4, 1.4, 1.4)
+                transform: scale3d(1.4)
 
 // Better data section - used on homepage
 #deep-dive
@@ -104,34 +125,59 @@
         text-align: center
         margin-top: 100px
         margin-bottom: 89px
-    .col-sm
+    .col-md
         display: flex
         .img-parent
+            flex: 1
             width: 80px
             img
                 height: 50px
         .text-container
-            max-width: 390px
+            flex: 4
+            padding-right: 30px
             p
                 color: $gray
     .row
         &:nth-child(n+2)
             margin-bottom: 30px
 
+    @media screen and (max-width : $breakpoint-laptop)
+        .col-md
+            .img-parent
+                flex: 1
+            .text-container
+                flex: 3
+
+    @media screen and (max-width : $breakpoint-phone)
+        .row
+            margin-bottom: 0 !important
+            .col-md
+                margin-bottom: 20px
+                .img-parent
+                    flex: 1
+                .text-container
+                    flex: 3
+
+
+
 // Invest CTA section - used on homepage
 #invest
+    margin-bottom: 100px
     background-color: $blue-4
-    width: 83%
+    width: calc(100vw - ((100vw - 1110px) /2))
     padding: 70px
     display: flex
     justify-content: flex-end
     box-shadow: 20px 20px 0 0 $blue-1
+    @media screen and (max-width : 1110px) 
+        width: 90%
+        margin: 0 auto 100px
+
     .invest-parent
         width: 1110px
         text-align: center
         h2
-            margin-bottom: 30px
-            font-size: 33px
+            margin-bottom: 20px
             color: $blue-0
         p
             max-width: 600px
@@ -148,26 +194,41 @@
     margin-top: 50px
     .row
         display: flex
-        border-bottom: 1px solid #ddd
     .side
         &-1
             display: flex
             justify-content: center
-            height: 650px
+            height: calc(100vh - 70px)
             flex-direction: column
+            padding-bottom: 50px
             h1
                 margin-bottom: 30px
+                line-height: 1em
             p 
-                margin-bottom: 35px
+                margin-bottom: 40px
                 line-height: 1.7em
         &-2
             display: flex
             justify-content: center
             flex-direction: column
+            padding-bottom: 50px
+            @media screen and (max-width : $breakpoint-phone) 
+                display: none
+            img 
+                width: 350px
+                margin: 0 auto
+
+    @media screen and (max-width : $breakpoint-tablet)
+        .side-1
+            height: auto
+            padding-top: 100px
+            padding-bottom: 100px
+        .side-2
+            display: none
 
 // old tech section
 #old-tech
-    padding: 150px 0
+    padding: 20px 0 110px 0
     ul
         list-style: none
         margin-top: 35px
@@ -186,21 +247,33 @@
                 background-image: url('../images/icon-grey-x.svg')
                 content: ''
                 background-size: cover
-    .col-sm
+    .col-md
         display: flex
         justify-content: center
         flex-direction: column
-// New section
+        img 
+            width: 500px
+    @media screen and (max-width : $breakpoint-laptop)
+        padding-bottom: 50px
+        .col-md
+            width: 100%
+            img 
+                margin: 0 auto 40px auto
+                width: 100% !important
+    
+// New tech section
 #new-tech-section
     background-color: $blue-1
-    padding: 65px 0
+    padding: 70px 0
     .number-heading
         text-align: center
         flex-direction: column
-        max-width: 500px
+        max-width: 600px
         margin: 0 auto 50px auto
         p, h2
             color: white
+        h2 
+            line-height: 1.4em
     .number-section
         span 
             font-size: 40px
@@ -211,12 +284,82 @@
             width: 80%
             display: block
             margin: auto
-            margin-bottom: 30px
-            padding: 0 30px 10px 30px
+            margin-bottom: 20px
+            padding: 0 30px 5px 30px
         p 
             font-weight: 500
             text-align: center
             color: white
+            padding: 0 20px
+
+// Blockquote 
+#blockquote
+    width: 715px
+    margin: 0 auto
+    border-top: 5px solid #eeeeee
+    border-bottom: 5px solid #eeeeee
+    padding: 60px 0
+    margin-top: 115px
+    margin-bottom: 145px
+    @media screen and (max-width : $breakpoint-tablet) 
+        width: 85%
+    @media screen and (max-width : $breakpoint-phone)
+        margin-top: 75px
+        margin-bottom: 100px
+        width: calc(100% - 30px)
+    h3 
+        line-height: 1.3em
+
+// Tabs 
+#information
+    margin-bottom: 150px
+    overflow-x: scroll
+    @media screen and (max-width : $breakpoint-phone)
+        margin-bottom: 100px
+    h3 
+        margin-bottom: 30px
+        margin-top: 20px
+
+// Importance of respiration section
+#respiration-importance
+    .row 
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+    .side
+        &-1 
+            img 
+                margin-left: -80px
+                box-shadow: 0 3px 25px 0 rgba(1,1,1,.2)
+                width: 105%
+        &-2
+            display: flex
+            justify-content: center
+            flex-direction: column
+            h2 
+                margin-bottom: 35px
+    @media screen and (max-width : $breakpoint-tablet) 
+        .row
+            flex-direction: column
+            .side-1
+                img 
+                    margin: 0 auto 60px auto
+                    width: 100%
+                    display: block
+
+
+// Footnotes
+#footnotes
+    margin-top: 130px
+    margin-bottom: 40px
+    p 
+        line-height: 1.5em !important
+        max-width: 800px
+        margin: auto
+        small
+        color: $gray
+        font-size: 14px
+        line-height: 1.3em !important
 
 
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>video-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-669.000000, -2090.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Video-section" transform="translate(-3.000000, 1904.000000)">
+                <g id="arrow" transform="translate(678.000000, 192.000000)">
+                    <g id="video-arrow">
+                        <circle id="Oval-2" stroke="#FFFFFF" stroke-width="6" fill-opacity="0.4" cx="45" cy="45" r="48"></circle>
+                        <polygon id="Triangle" points="71 46 33 65 33 27"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -5,25 +5,25 @@
             <h2>How DistaSense® Works</h2>
         </div>
         <div class="row">
-            <div class="col-sm">
-                <img src="assets/images/icon-circles.svg" alt="icon radiating concentric circles">
+            <div class="col-md">
+                {% include icon-circles.svg %}                
                 <h4>Create EM Field</h4>
                 <p>Setting up this technology is very simple & straight forward.</p>
             </div>
-            <div class="col-sm">
-                <img src="assets/images/icon-waves.svg" alt="icon radiating concentric circles">
+            <div class="col-md">
+                {% include icon-waves.svg %}                 
                 <h4>Living Tissues Disrupt EM Field</h4>
                 <p>This method of data accumulation is very unobtrusive & patient friendly.</p>
             </div>
-            <div class="col-sm">
-                <img src="assets/images/icon-graph.svg" alt="icon radiating concentric circles">
+            <div class="col-md">
+                {% include icon-graph.svg %} 
                 <h4>Disruptions are Monitored</h4>
                 <p>Industry leading data accuracy with unlimited potential applications.</p>
             </div>
         </div>
         <div class="row cta-section">
             <p class="text-center">
-                <a href="#" class="cta-button">Learn more</a>
+                <a href="our-technology.html" class="cta-button">Learn more</a>
             </p>        
         </div>
     </div>
@@ -45,7 +45,24 @@
 </section>
 
 <!-- Video section -->
+        
 <section id="home-video">
+    <div id="container">
+        <a id="playme" onclick="revealVideo('video','youtube')"><img src="assets/images/video-arrow.svg" width="400" alt="loupe"></a>
+    </div>
+
+    <div id="video" class="lightbox" onclick="hideVideo('video','youtube')">
+        <div class="lightbox-container">  
+            <div class="lightbox-content">
+                <button onclick="hideVideo('video','youtube')" class="lightbox-close">
+                    ✕
+                </button>
+                <div class="video-container">
+                    <iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/feB3WL0dVvo?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>      
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Better data  -->
@@ -55,7 +72,7 @@
             <h2>Better data, Better results.</h2>
         </div>
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md">
                     <div class="img-parent">
                         <img src="assets/images/icons-better-section/stats-lines-pipes.svg" alt="">
                     </div>
@@ -64,7 +81,7 @@
                     <p>Greater data accuracy than other non-contact monitoring solutions.</p>
                 </div>
             </div>
-            <div class="col-sm">
+            <div class="col-md">
                 <div class="img-parent">
                     <img src="assets/images/icons-better-section/sprint.svg" alt="">
                 </div>
@@ -75,7 +92,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md">
                     <div class="img-parent">
                         <img src="assets/images/icons-better-section/rocket@1x.svg" alt="">
                     </div>
@@ -84,7 +101,7 @@
                     <p>Greater data accuracy than other non-contact monitoring solutions.</p>
                 </div>
             </div>
-            <div class="col-sm">
+            <div class="col-md">
                 <div class="img-parent">
                     <img src="assets/images/icons-better-section/sport-shirt.svg" alt="">
                 </div>
@@ -95,7 +112,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
+            <div class="col-md">
                     <div class="img-parent">
                         <img src="assets/images/icons-better-section/ambulance.svg" alt="">
                     </div>
@@ -104,7 +121,7 @@
                     <p>Greater data accuracy than other non-contact monitoring solutions.</p>
                 </div>
             </div>
-            <div class="col-sm">
+            <div class="col-md">
                 <div class="img-parent">
                     <img src="assets/images/icons-better-section/medical-history.svg" alt="">
                 </div>
@@ -122,6 +139,6 @@
     <div class="invest-parent">
         <h2>Investing in the Future Starts Now</h2>
         <p>Partner with us & help revolutionize the intersection of healthcare & technology for non contact vital monitoring.</p>
-        <a href="#" class="cta-button secondary">Learn more</a>
+        <a href="#" class="cta-button secondary">Contact us</a>
     </div>
 </section>

@@ -10,32 +10,53 @@ $black: #000000
 $darkGray: #333333
 $darkerGray: #555555
 $gray: #777777
+$lightGray: #fafafa
 $muted: #bbbbbb
+
+// Breakpoints
+$breakpoint-laptop: 991px 
+$breakpoint-tablet: 768px
+$breakpoint-phone: 599px
 
 
 // Fonts
 body 
     font-family: 'Source Sans Pro', sans-serif !important
 
+    .reg-weight
+        font-weight: 500 !important
+
     h1
-        font-size: 50px
+        font-size: 55px
         color: $darkGray
         font-weight: 700
+        line-height: 1.2em
+        @media screen and (max-width : $breakpoint-tablet) 
+            font-size: 45px
 
     h2 
-        font-size: 35px
+        font-size: 37px
         color: $darkGray
         font-weight: 700
+        line-height: 1.3em
+        @media screen and (max-width : $breakpoint-tablet) 
+            font-size: 33px
+        // @media screen and (max-width : 599px)
+        //     text-align: center
 
     h3 
         font-size: 24px
         color: $darkGray
         font-weight: 700
+        @media screen and (max-width : $breakpoint-tablet) 
+            font-size: 22px
 
     h4
         font-size: 20px
         color: $darkGray
         font-weight: 700
+        @media screen and (max-width : $breakpoint-tablet) 
+            font-size: 18px
 
     h5 
         font-size: 16px
@@ -51,31 +72,70 @@ body
         font-size: 18px
         color: $darkGray
         font-weight: 500
-        font-family: 'helvetica', arial, sans-serif !important
+        line-height: 1.6em
+        // the subheader with line
         &.category
             font-size: 14px 
-            font-weight: 500
+            font-weight: 600
             color: $darkGray
             text-transform: uppercase
-            margin-bottom: 10px !important
+            margin-bottom: 6px !important
+            padding-left: 45px
+            position: relative
+            line-height: 1.5em !important
+            &:before
+                content: ''
+                height: 2px
+                width: 35px
+                background-color: $gray
+                position: absolute
+                left: 0px
+                bottom: 10px
+
+            // class removes line
+            &.no-line
+                padding-left: 0
+                &:before
+                    display: none
+            &.large 
+                font-size: 16px
+                    
 
     a
         display: inline-block !important
+        // with pink underline and arrow
         &.link-underline
             text-decoration: none
             border-bottom: 2px solid #E25C54
             padding-bottom: 3px
             color: $darkGray
             font-weight: 600
-            width: 112px
+            width: 105px
             transition: .2s all
+            font-size: 15px
             i.fas
-                font-size: 15px
+                font-size: 13px
                 margin-left: 10px
                 transition: .2s all
+                color: $darkGray
             &:hover
                 i.fas
-                    margin-left: 15px
+                    margin-left: 13px
+
+// Helper classes
+// shows at desktop
+.for-desktop
+    @media screen and (max-width : $breakpoint-phone)
+        display: none !important
+    @media screen and (min-width : $breakpoint-phone)
+        display: inline-block !important
+
+// shows at mobile
+.for-mobile
+    @media screen and (min-width : $breakpoint-phone)
+        display: none !important
+    @media screen and (max-width : $breakpoint-phone)
+        display: inline-block !important
             
 
 
@@ -87,14 +147,18 @@ header#header
     right: 0
     height: 50px
     background-color: #fff
-    z-index: 10
+    z-index: 1
     width: 100%
+    box-shadow: 0 6px 25px 0 rgba(1,1,1,0.03)
     #logo 
         font-weight: 600
         padding-top: 16px
         display: inline-block
         font-size: 14px
         text-transform: uppercase
+        a 
+            color: inherit
+            text-decoration: none
     //main nav
     ul#main-nav
         display: flex
@@ -103,16 +167,19 @@ header#header
         right: 0
         top: 0
         height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
         li 
             a
                 margin-right: 50px
-                height: 100%
                 display: flex
                 align-items: center
                 justify-content: center
                 font-size: 14px
                 font-weight: 600
-                text-decoration: none
+                // text-decoration: none
                 color: $black
                 &:hover
                     color: $black
@@ -120,17 +187,155 @@ header#header
             &:nth-last-child(1) a
                 background-color: $blue-1
                 color: white
-                padding: 0 20px
-                transition: .1s all
+                padding: 14px 20px
+                transition: .2s all
                 text-transform: capitalize
                 margin-right: 0
+                height: 50px
                 text-decoration: none
-                border: 1px solid $blue-1
+                // border: 2px solid $blue-1
                 &:hover 
-                    background-color:  white
-                    color: $blue-1
-                    border: 1px solid $blue-1
+                    background-color:  $blue-2
+                    color: white
+                    // border: 2px solid $blue-1
 
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99)
+$menuItems: 7
+
+#header-mobile
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    height: 50px
+    width: 100%
+    background: #fff
+    overflow: hidden
+    transition: all 0.5s ease-out, background 1s ease-out
+    transition-delay: 0.2s
+    z-index: 1
+    .burger-container 
+        position: relative
+        display: inline-block
+        height: 50px
+        width: 50px
+        cursor: pointer
+        transform: rotate(0deg)
+        transition: all 0.3s $cubic
+        user-select: none
+        -webkit-tap-highlight-color: transparent
+        #burger 
+            width: 18px
+            height: 8px
+            position: relative
+            display: block
+            margin: -4px auto 0
+            top: 50%
+            .bar 
+                width: 100%
+                height: 1px
+                display: block
+                position: relative
+                background: #333
+                transition: all 0.3s $cubic
+                transition-delay: 0s
+                &.topBar 
+                    transform: translateY(0px) rotate(0deg)
+                
+                &.btmBar 
+                    transform: translateY(6px) rotate(0deg)
+                
+            
+    .icon 
+        display: inline-block
+        position: absolute
+        height: 100%
+        line-height: 50px
+        width: 50px
+        height: 50px
+        text-align: center
+        color: #333
+        font-size: 22px
+        left: 50%
+        transform: translateX(-50%)
+        &.icon-bag 
+            right: 0
+            top: 0
+            left: auto
+            transform: translateX(0px)
+            transition: transform 0.5s $cubic
+            transition-delay: 0.65s
+
+    ul.menu 
+        position: relative
+        display: block
+        padding: 0px 48px 0
+        list-style: none
+        li.menu-item 
+            border-bottom: 1px solid #eee
+            margin-top: 5px
+            transform: scale(1.15) translateY(-30px)
+            opacity: 0
+            transition: transform 0.5s $cubic, opacity 0.6s $cubic
+            @for $i from 1 through $menuItems
+                &:nth-child(#{$i}) 
+                    transition-delay: #{0.56 - ($i * 0.07)}s
+                
+            a 
+                display: block
+                position: relative
+                color: #333
+                text-decoration: none
+                font-size: 22px
+                line-height: 2.35
+                font-weight: 400
+                width: 100%
+            
+    &.menu-opened 
+        height: 100%
+        background-color: #fff
+        transition: all 0.3s ease-in, background 0.5s ease-in
+        transition-delay: 0.25s
+        .burger-container 
+            transform: rotate(90deg)
+            #burger 
+                .bar
+                    transition: all 0.4s $cubic
+                    transition-delay: 0.2s
+                    &.topBar 
+                        transform: translateY(4px) rotate(45deg)
+                    
+                    &.btmBar 
+                        transform: translateY(3px) rotate(-45deg)
+                    
+        ul.menu 
+            li.menu-item 
+                transform: scale(1) translateY(0px)
+                opacity: 1
+                @for $i from 1 through $menuItems 
+                    &:nth-child(#{$i}) 
+                        transition-delay: #{0.07 * $i+0.2}s
+                    
+                
+        .icon 
+            &.icon-bag 
+                transform: translateX(75px)
+                transition-delay: 0.3s
+
+// Mobile nav
+// Hide main nav at mobile, show mobile nav
+@media screen and (max-width : 599px) 
+    #header-mobile
+        display: block
+    #header
+        display: none
+// Hide mobile nav, and show main nav
+@media screen and (min-width : 600px) 
+    #header-mobile
+        display: none
+    #header
+        display: block
+    
 
 
 // CTA button with rounded corners 
@@ -166,12 +371,20 @@ footer
     background-color: #eee
     display: flex
     padding: 75px 0
-    margin-top: 100px
+    margin-top: 0px
     h5  
         color: $darkerGray
         font-weight: 700
     ul
         list-style-type: none
+        padding-left: 0
+        @media screen and (max-width : $breakpoint-phone)
+            border-top: 1px solid #ddd
+            border-bottom: 1px solid #ddd
+            padding-top: 20px
+            padding-bottom: 20px
+            margin-top: 20px
+            margin-bottom: 20px
     a 
         color: $darkerGray
         font-weight: 600
@@ -187,4 +400,168 @@ footer
                 transition: all .1s
                 &:hover 
                     transform: translateY(-2px)
+
+// Tabs component
+#tabs
+    width: 100%
+    .tabs-bar
+        width: 100%
+        list-style: none
+        display: block
+    .tabs-bar .tab
+        display: inline-block
+        cursor: pointer
+    .tab-active
+        background-color: white !important
+        box-shadow: 0 3px 20px rgba(1,1,1,.1)
+        color: #555555 !important
+    .content
+        display: none
+        &-container
+            padding: 0 15px
+    .content-active
+        display: block
+
+    ul.tabs-bar
+        height: 100px
+        display: flex
+        list-style: none
+        padding-left: 0
+        justify-content: space-between
+        @media screen and (max-width : 599px) 
+            flex-direction: column
+            height: 200px
+
+        li.tab
+            width: 49.5%
+            text-align: center
+            height: 100%
+            border: 1px solid #eee
+            font-size: 23px
+            font-weight: 600
+            color: #999
+            background-color: #fafafa
+            padding-top: 32px
+            transition: all .1s
+            @media screen and (max-width : 599px) 
+                width: calc(100% - 30px)
+                margin: 0 auto 10px auto
+                padding-top: 28px
+
+            &:hover
+                box-shadow: 0 3px 20px rgba(1,1,1,.1)
+                background-color: #fafafa
+            
+// Table styling for our tech page
+table.table
+    thead
+        th 
+            height: 75px
+            vertical-align: middle
+            text-align: center
+            color: $darkGray
+            font-weight: 600
+            background-color: $lightGray
+            font-size: 18px
+            border-bottom-width: 1px !important
+    tbody
+        th 
+            height: 75px
+            vertical-align: middle
+            text-align: left
+            color: $gray
+            font-size: 18px
+            font-weight: 600
+            padding-left: 30px
+        td
+            vertical-align: middle
+            text-align: center
+            height: 75px
+            color: $blue-1 !important
+            font-weight: 700
+            font-size: 15px
+            img 
+                width: 20px
+                height: 20px
+
+// lightbox styling
+.lightbox 
+    background-color: fade(black, 80%) 
+    overflow: scroll
+    position: fixed
+    display: none
+    z-index: 1
+    bottom: 0
+    right: 0
+    left: 0
+    top: 0
+    &-container 
+        position: relative
+        max-width: 960px
+        margin: 7% auto
+        display: block    
+        padding: 0 3%
+        height: auto
+        z-index: 10
+        // Increasing top margin for mobile
+        @media screen and (max-width: 768px)
+            margin-top: 10%
+        @media screen and (max-width: 414px)
+            margin-top: 13%
+
+    &-content 
+        box-shadow: 0 1px 6px fade(black, 70%)
+
+    &-close 
+        text-transform: uppercase   
+        background: transparent
+        position: absolute
+        font-weight: 300     
+        font-size: 32px
+        display: block
+        border: none
+        color: white
+        top: -45px
+        right: 1%
+        &:hover
+            opacity: .5
+  
+.video-container  
+    padding-bottom: 56.25%
+    position: relative 
+    padding-top: 30px 
+    overflow: hidden
+    height: 0 
+
+.video-container iframe,
+.video-container object,
+.video-container embed 
+    position: absolute
+    height: 100%
+    width: 100%  
+    left: 0
+    top: 0
+#video[style="display: block;"]
+    &:after
+        content: ''
+        height: 100vh
+        width: 100vw
+        display: block
+        background: rgba(1,1,1,.6)
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 5
+
+#video[style="display: none;"]
+    &:after
+        content: ''
+        height: 100vh
+        width: 100vw
+        display: block
+        background: transparent
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -1
 

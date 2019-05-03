@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1662px" height="508px" viewBox="0 0 1662 508" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="home-hero-image">
+<svg width="100%" viewBox="0 0 1662 508" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="home-hero-image">
     <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
     <title>Group 12</title>
     <desc>Created with Sketch.</desc>
@@ -93,30 +92,30 @@
                             <ellipse id="Oval-4-Copy" stroke="#DDDDDD" fill="#FFFFFF" fill-rule="nonzero" cx="1575.50322" cy="493.5" rx="5.50322392" ry="5.5"></ellipse>
                             <path d="M1188.97945,472.999998 C1182.04779,473.001138 1175.12627,472.472881 1168.27588,471.41988 C1124.98488,464.77674 1087.60305,459.082621 1056.44517,465.274976 C1029.67981,470.608468 985.888035,469.403213 926.290771,461.701916 C884.950415,456.358933 838.282743,458.08615 837.815351,458.10513 L0,458.10513 L0.136576788,443.926772 L837.40519,443.926772 C840.829553,443.798654 886.347822,442.237517 928.126954,447.63744 C985.358641,455.035051 1028.75934,456.325718 1053.64558,451.367088 C1087.27874,444.671753 1125.81474,450.569912 1170.44115,457.39811 C1197.0825,461.474151 1218.24869,456.131169 1242.75816,449.948304 C1267.55855,443.680027 1295.69747,436.581358 1333.09361,439.80328 C1384.12519,444.206733 1432.64813,442.251752 1468.065,440.828222 C1482.082,440.263555 1651.32784,439.779555 1661,439.779555 L1661,453.957913 C1651.614,453.957913 1482.5017,454.432423 1468.63732,454.99709 C1432.81505,456.42062 1383.74365,458.408816 1331.83928,453.929442 C1296.85164,450.911559 1271.12123,457.4076 1246.23975,463.690112 C1227.43437,468.449448 1209.39208,472.999998 1188.97945,472.999998 Z" id="Shape" fill="#EEEEEE" fill-rule="nonzero"></path>
                             <g class="hero-text-3">
-                                <path d="M1389,208 L1597.03516,208" id="Line-6" stroke="#979797" stroke-linecap="square"></path>
-                                <path d="M1128.5,468 L1388.51758,207.982422" id="Line-5" stroke="#979797" stroke-linecap="square"></path>
-                                <path d="M1128.5,468 L1128.5,462" id="Line-7" stroke="#979797" stroke-linecap="square"></path>
-                                <path d="M1131.5,471 L1131.5,465" id="Line-7" stroke="#979797" stroke-linecap="square" transform="translate(1131.500000, 468.000000) rotate(-90.000000) translate(-1131.500000, -468.000000) "></path>
-                                 <text id="Easily-setup-and-can" font-family="SourceSansPro-Semibold, Source Sans Pro" font-size="14" font-weight="500" fill="#000000">
-                                    <tspan x="1387" y="179">Easily setup and can easily be </tspan>
-                                    <tspan x="1387" y="197">threaded into fabic and wearables.</tspan>
+                                <path d="M1389,208 L1597.03516,208" id="Line-6" stroke="#999999" stroke-linecap="square"></path>
+                                <path d="M1128.5,468 L1388.51758,207.982422" id="Line-5" stroke="#999999" stroke-linecap="square"></path>
+                                <path d="M1128.5,468 L1128.5,462" id="Line-7" stroke="#999999" stroke-linecap="square"></path>
+                                <path d="M1131.5,471 L1131.5,465" id="Line-7" stroke="#999999" stroke-linecap="square" transform="translate(1131.500000, 468.000000) rotate(-90.000000) translate(-1131.500000, -468.000000) "></path>
+                                 <text id="Easily-setup-and-can" font-family="'Source Sans Pro',arial, sans-serif" font-size="15" font-weight="600" fill="#999999">
+                                    <tspan x="1387" y="179">Easily Setup And Can Easily Be </tspan>
+                                    <tspan x="1387" y="197">Threaded Into Fabic And Wearables.</tspan>
                                 </text>
                             </g>
                             <g class="hero-text-2">
-                                <circle id="Oval" stroke="#979797" fill-opacity="0.5" fill="#FFFFFF" cx="1114" cy="237" r="4"></circle>
-                                <path d="M1114,4.5 L1114,232.367188" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
-                                <text id="A-100%-safe-field-wh" font-family="SourceSansPro-Semibold, Source Sans Pro" font-size="14" font-weight="500" fill="#000000">
-                                    <tspan x="1125" y="14">A  100% safe field which allows </tspan>
-                                    <tspan x="1125" y="32">vital signs to be monitored. </tspan>
+                                <circle id="Oval" stroke="#999999" fill-opacity="0.5" fill="#ffffff" cx="1114" cy="237" r="4"></circle>
+                                <path d="M1114,4.5 L1114,232.367188" id="Line-3" stroke="#999999" stroke-linecap="square"></path>
+                                <text id="A-100%-safe-field-wh" font-family="'Source Sans Pro',arial, sans-serif" font-size="15" font-weight="600" fill="#999999">
+                                    <tspan x="1125" y="14">A 100% Safe Field Which Allows </tspan>
+                                    <tspan x="1125" y="32">Vital Signs To Be Monitored. </tspan>
                                 </text>
                             </g>
                             <g class="hero-text-1">
-                                <circle id="Oval" stroke="#979797" fill-opacity="0.9" fill="#FFFFFF" cx="1056" cy="410" r="4"></circle>
-                                <path d="M421.5,311.5 L1056,311.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
-                                <path d="M1056,311.585366 L1056,405.829268" id="Line-4" stroke="#979797" stroke-linecap="square"></path>
-                                <text id="No-contact-required" font-family="SourceSansPro-Semibold, Source Sans Pro" font-size="14" font-weight="500" fill="#000000">
-                                    <tspan x="420" y="278">No contact required which creates </tspan>
-                                    <tspan x="420" y="296">a far better patient experience.</tspan>
+                                <circle id="Oval" stroke="#999999" fill-opacity="0.9" fill="#FFFFFF" cx="1056" cy="410" r="4"></circle>
+                                <path d="M421.5,311.5 L1056,311.5" id="Line-2" stroke="#999999" stroke-linecap="square"></path>
+                                <path d="M1056,311.585366 L1056,405.829268" id="Line-4" stroke="#999999" stroke-linecap="square"></path>
+                                <text id="No-contact-required" font-family="'Source Sans Pro',arial, sans-serif" font-size="15" font-weight="600" fill="#999999">
+                                    <!-- <tspan x="420" y="278">No contact required</tspan> -->
+                                    <tspan x="420" y="300">No Contact Required</tspan>
                                 </text>
                             </g>
                             

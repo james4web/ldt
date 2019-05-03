@@ -36,74 +36,72 @@ function hideVideo(div, video_id) {
 
 // Animations =======================================================================
 // Home hero animations
-const circle1 = document.querySelectorAll('.circle-1');
-const circle2 = document.querySelectorAll('.circle-2');
-const circle3 = document.querySelectorAll('.circle-3');
-const heroHome = document.querySelectorAll('.home-hero');
-const heroImage = document.querySelectorAll('.home-hero-image');
-const source = document.querySelectorAll('.source ellipse');
-const homeHeroText = document.querySelectorAll('.text-container');
 
+$('#home-hero').each(function () {
+  const circle1 = document.querySelectorAll('.circle-1');
+  const circle2 = document.querySelectorAll('.circle-2');
+  const circle3 = document.querySelectorAll('.circle-3');
+  const heroHome = document.querySelectorAll('.home-hero');
+  const heroImage = document.querySelectorAll('.home-hero-image');
+  const source = document.querySelectorAll('.source ellipse');
+  const homeHeroText = document.querySelectorAll('.text-container');
 
-var tl = new TimelineMax();
+  var abc = new TimelineMax();
+  var controller = new ScrollMagic.Controller();
 
-tl
-  .from('.home-hero .text-container h1', 1, {
-    autoAlpha: 0,
-    y: 40
-  })
-  .from('.home-hero .text-container p.large', 1, {
-    autoAlpha: 0,
-    y: 10
-  }, "-=.3")
-  .from(heroImage, 1, {
-    y: 40,
-    transformOrigin: "center bottom",
-    scale: 1.1,
-    autoAlpha: 0,
-    ease: Power4.easeOut,
-  })
-  // reduce time
-  .staggerFrom(source, .5, {
-    stroke: "#dddddd",
-    scale: 0,
-    ease: Back.easeOut.config(1.7),
-  })
-  .from(circle1, .5, {
-    scale: 0,
-    autoAlpha: 0,
-    transformOrigin: "center bottom",
-    ease: Back.easeOut.config(1.7),
-  })
-  .from(circle2, .5, {
-    scale: 0,
-    autoAlpha: 0,
-    transformOrigin: "center bottom",
-    ease: Back.easeOut.config(1.7),
-  })
-  .from(circle3, .5, {
-    scale: 0,
-    autoAlpha: 0,
-    transformOrigin: "center bottom",
-    ease: Back.easeOut.config(1.7),
-  })
-  .from('.home-hero', .7, {
-    backgroundColor: 'white',
-  })
+  abc
+    .from(heroImage, 1, {
+      y: 40,
+      transformOrigin: "center bottom",
+      scale: 1.1,
+      autoAlpha: 0,
+      ease: Power4.easeOut,
+    })
+    .staggerFrom(source, 1, {
+      stroke: "#dddddd",
+      ease: Back.easeOut.config(1.7),
+    })
+    .from(circle1, 2, {
+      scale: 0,
+      autoAlpha: 0,
+      transformOrigin: "center bottom",
+      ease: Power1.easeOut,
+    },"-=.5")
+    .from(circle2, 2, {
+      scale: 0,
+      autoAlpha: 0,
+      transformOrigin: "center bottom",
+      ease: Power1.easeOut,
+    },"-=2")
+    .from(circle3, 2, {
+      scale: 0,
+      autoAlpha: 0,
+      transformOrigin: "center bottom",
+      ease: Power1.easeOut,
+    },"-=2")
+    .staggerFrom('.hero-text-1', 1.2, {
+      autoAlpha: 0,
+      ease: Power2.easeOut,
+    },"3")
+    .staggerFrom('.hero-text-2', 1.2, {
+      autoAlpha: 0,
+      ease: Power2.easeOut,
+    },"-=1")
+    .staggerFrom('.hero-text-3', 1.2, {
+      autoAlpha: 0,
+      ease: Power2.easeOut,
+    },"-=1")
+    .from('.home-hero', 2, {
+      backgroundColor: 'white',
+    })
 
-  // add time delay
-  .staggerFrom('.hero-text-1', 1.2, {
-    autoAlpha: 0,
-    ease: Power2.easeOut,
-  })
-  .staggerFrom('.hero-text-2', 1.2, {
-    autoAlpha: 0,
-    ease: Power2.easeOut,
-  })
-  .staggerFrom('.hero-text-3', 1.2, {
-    autoAlpha: 0,
-    ease: Power2.easeOut,
-  })
+    var scene = new ScrollMagic.Scene({
+      triggerElement: '#home-hero',
+    })
+    .addIndicators()
+    .setTween(abc).addTo(controller);
+
+});
 
 // Home 3 col animations =======================================
 // var controller =  new ScrollMagic.Controller();
@@ -243,29 +241,6 @@ $('#testimonial-01').each(function () {
     .setTween(animateIn).addTo(controller);
 });
 
-// Home Video animation =======================================
-// const videoSection = document.querySelectorAll('#home-video')
-
-// var controllerVideo = new ScrollMagic.Controller();
-
-// $(videoSection).each(function () {
-
-//   var animateIn = new TimelineMax();
-
-//   animateIn
-//     .from('#home-video img', .5, {
-//       autoAlpha: 0,
-//       y: 50,
-//       ease: Power1.easeOut
-//     }, '-=1.5')
-
-//   var scene = new ScrollMagic.Scene({
-//       triggerElement: this,
-//     })
-//     .addIndicators()
-//     .setTween(animateIn).addTo(controllerVideo);
-// });
-
 // Homepage deep dive
 var deepDiveImgController = new ScrollMagic.Controller();
 var deepDiveTextController = new ScrollMagic.Controller();
@@ -302,29 +277,151 @@ $('#deep-dive').each(function () {
     .setTween(animateIn).addTo(deepDiveTextController);
 });
 
+// Eye catching blockquote section ===================================
+// Icon number 3
+$('#blockquote').each(function () {
 
-// Invest now section
-
-var investController = new ScrollMagic.Controller();
-
-
-$('#invest').each(function () {
   var animateIn = new TimelineMax();
+  let blockquote = document.querySelectorAll('#blockquote')
+  animateIn
 
-  animateIn.staggerFrom('#invest', .7, {
-    y: 40,
-    autoAlpha: 0,
-    ease: Circ.easeOut, 
-  },0);
-  animateIn.staggerFrom('#invest .invest-parent', .5, {
-    autoAlpha: 0,
-    y: 20,
-    ease: Circ.easeOut, 
-  },0);
+    .staggerFromTo(blockquote, 1, {
+      y: '20%',
+      autoAlpha: 0,
+      ease: Power4.easeOut
+    }, {
+      y: '0%',
+      autoAlpha: 1,
+      ease: Power4.easeOut
+    }, "+=1")
 
   var scene = new ScrollMagic.Scene({
       triggerElement: this,
     })
     .addIndicators()
-    .setTween(animateIn).addTo(investController);
+    .setTween(animateIn).addTo(controller);
+});
+
+// 1,2,3 section ===================================
+$('#new-tech-section').each(function () {
+
+  var animateIn = new TimelineMax();
+  let numberSection1 = document.querySelectorAll('.number-section .col-sm:nth-child(1) p')
+  let numberSection2 = document.querySelectorAll('.number-section .col-sm:nth-child(2) p')
+  let numberSection3 = document.querySelectorAll('.number-section .col-sm:nth-child(3) p')
+
+  animateIn
+    .from(numberSection1, 1, {
+      autoAlpha: 0,
+      y: -20,
+      ease: Power4.easeOut, 
+    },0)
+    .from(numberSection2, 1, {
+      autoAlpha: 0,
+      y: -20,
+      ease: Power4.easeOut,  
+    },"=-.7")
+    .from(numberSection3, 1, {
+      autoAlpha: 0,
+      y: -20,
+      ease: Power4.easeOut,
+    },"=-.7");
+
+  var scene = new ScrollMagic.Scene({
+      triggerElement: this,
+    })
+    .addIndicators()
+    .setTween(animateIn).addTo(controller);
+});
+
+
+// Our Technology page ==========================================================
+// OT Hero
+$('#hero-split .ot-hero').each(function () {
+  var othero = new ScrollMagic.Controller();
+  var animateIn = new TimelineMax();
+  let circles = document.querySelectorAll('.ot-hero #circles-yellow circle,.ot-hero #circles-blue circle,.ot-hero #circles-green circle')
+  let graph = document.querySelectorAll('.ot-hero #blue-line,.ot-hero #yellow-line, .ot-hero #green-line')
+  let gradient = document.querySelectorAll('.ot-hero #yellow-gradient, .ot-hero #blue-gradient, .ot-hero #green-gradient')
+  
+  animateIn
+  .staggerFrom(circles, .03, {
+    scale: 0,
+  transformOrigin: "center",
+    ease: Bounce.easeOut,
+  },.1)
+  .from(graph, 2, {drawSVG: 0})
+  .from(gradient, 1, {
+    autoAlpha:0,
+    transformOrigin: "top",
+    ease: Back.easeOut.config(1.7),
+  },"-=.5")
+	
+	var scene = new ScrollMagic.Scene({
+		triggerElement: this,
+		})
+		.addIndicators()
+		.setTween(animateIn).addTo(othero);
+  });
+
+
+
+// Old Technology section
+
+const oldTechController = new ScrollMagic.Controller();
+
+$('#old-tech').each(function () {
+  var animateIn = new TimelineMax();
+
+  animateIn
+    .from('#old-tech .img-1', 1, {
+	  y: 20,
+	  scale:0,
+    ease: Back.easeOut.config(1.7), 
+    },"=-.8")
+    .from('#old-tech .img-3', 1, {
+	  y: 20,
+	  scale:0,
+    ease: Back.easeOut.config(1.7),
+    },"=-.8")
+    .from('#old-tech .img-2', 1, {
+	  y: 20,
+	  scale:0,
+    ease: Back.easeOut.config(1.7),  
+    },"=-.8")
+
+  var scene = new ScrollMagic.Scene({
+      triggerElement: this,
+    })
+    .addIndicators()
+    .setTween(animateIn).addTo(oldTechController);
+});
+
+// Importance of respiration section
+$('#respiration-importance').each(function () {
+  var animateIn = new TimelineMax();
+  var respController = new ScrollMagic.Controller();
+
+  animateIn
+    .from('.box img',.8,{y: 70, autoAlpha: 0, ease: Back.easeOut.config(1.7)})
+    // .set(".box", { perspective: 500 })
+    // .set(".overlay", {z: 150})
+    // .fromTo(
+    //   ".overlay",
+    //   1,
+    //   { skewX: 30, scale: 1.7  },
+    //   {
+    //     skewX: 0,
+    //     xPercent: 100,
+    //     transformOrigin: "0% 100%",
+    //     ease: Power2.easeOut
+    //   }
+    // )
+
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: '#respiration-importance',
+  })
+  .addIndicators()
+  .setTween(animateIn).addTo(respController);
 });
